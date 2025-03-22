@@ -1,0 +1,70 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(){
+
+string usuario, contrasena;
+string ingUsuario, ingContra;
+
+int intentos=3;
+
+usuario="hazel.bo";
+contrasena="12345";
+
+int opcion;
+cout << "BIENVENIDO A EL PRIMER PROGRAMA DE DIEGO DLORENNTTI(hazel.bo)"<< endl;
+cout<<"Eliga opcion:"<< endl;
+cout<< "1. Iniciar sesion"<<endl;
+cout<< "2. Crear cuenta"<<endl;
+cout<< "3. salir del menu"<<endl;
+
+cin >> opcion;
+switch(opcion){
+    case 1: 
+
+  while (ingUsuario != usuario && ingContra != contrasena ){
+    cout<< "Ingrese nombre de usuario: "<<endl;
+        cin>>ingUsuario;
+    cout<< "Ingrese contrasena: "<<endl;
+        cin>>ingContra;
+
+        if(ingUsuario != usuario || ingContra != contrasena ){
+            
+            if(intentos == 0){cout << "demasiados intentos..."<< endl; return 0;}
+            cout << "A usted le quedan " << intentos << " intentos.";
+            intentos--; 
+        }else {cout << "Bienvendio " << usuario<< " gusto tenerte de vuelta te amo.";}
+  }
+    break;
+
+
+            case 2:{ int paso3 = 0;
+            while(paso3 == 0){
+            string usuarioCrear, contraCrear,email;
+            cout << "Crear usuario : "<< endl;
+            cin >> usuarioCrear;
+            cout << "Crear Contrasena: " << endl;
+            cin >> contraCrear;
+            cout << "Ingresar Email"<<endl;
+            cin >> email;
+                            int eleccion_crear_usuario;
+            cout<< "Confirmar cuenta: usuario: " << usuarioCrear << " ,contrasenha: " << contraCrear << " ,Email : " << email <<endl;
+            cout<< "1. Confirmar \n 2. Reintentar";
+            cin>> eleccion_crear_usuario;
+                    switch(eleccion_crear_usuario){
+                        case 1: cout<< "Bienvenido "<< usuarioCrear<<endl; return 0;
+                        case 2: continue;
+                        default: cout << "Respuesta Invalida"; return 0;
+                    }
+                }
+            } break;
+
+                                case 3: cout<< "Saliendo del Menu... ADIOS"<<endl; return 0; break;
+
+                                        default: cout << "RESPUSTA INVALIDA... (volver a intentar)"; return 0; break;
+
+}
+    return 0;
+}
