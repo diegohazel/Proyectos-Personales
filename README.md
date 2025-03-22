@@ -1,5 +1,7 @@
 # Proyectos-Personales
 Aqui estoy haciendo "Proyectos Personales" para practicar lo Aprendido en Clases de la U.
+Practicar Git y GitHub
+Practicar C++
 
 ##Proyecto 1.0 "Usuairio y Contrasenha"
    En este Proyecto 1 cree un menu con 3 opciones:
